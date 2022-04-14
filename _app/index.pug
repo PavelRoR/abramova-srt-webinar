@@ -1,0 +1,50 @@
+-var path = '';
+-var head_url = '';
+-var head_title = '«Системно-родовая терапия». Освой самый эффективный инструмент современной психологии';
+-var head_description = 'Открытый онлайн мастер-класс Жанны Абрамовой';
+//-var head_img = 'img/banner.jpg';
+-var styles = path+'css/styles.min.css';
+-var fav_ap = path+'favicon.svg';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var libsScripts = path+'js/libs.min.js';
+-var scripts = path+'js/scripts.min.js';
+-var noref = true;
+-var action = 'https://shop.iomp.ru/?r=personal/newsletter/sub/add&id=33401&lg=ru&Contact[id_newsletter]=';
+-var group = '423';
+-var formId = '199';
+-var formVc = '1258434519';
+-var ah = true;
+-var io = true;
+-var href = '#Modal';
+//- -var footer_title = true
+//- -var oferta = 'https://mastervision.su/oferta.docx'
+mixin b(cl, clb, href, p, target, id)
+	.button-wrapper(class=cl)
+		a.button(class=clb href!=href target=target id=id)=p
+mixin gt(cl, h3)
+	h3.general-title(class=cl)!=h3
+mixin imgs(cl, src, alt)
+	img(class=cl src=path+src alt=alt)
+
+doctype html
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		.wrapper
+			include pug/base/1-header-main
+			include pug/main/1-main
+			include pug/main/2-second
+			include pug/main/3-third
+			include pug/main/4-fourth
+			include pug/main/5-fifth
+			include pug/main/6-author
+			include pug/main/7-revs
+			include pug/base/2-footer
+		include pug/main/8-modal
+		include pug/base/3-scripts
+		//- include pug/scripts/chat
+		include pug/scripts/body_bottom_scripts
