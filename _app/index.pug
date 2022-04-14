@@ -7,7 +7,7 @@
 -var fav_ap = path+'favicon.svg';
 -var fav_ico = path+'favicon.ico';
 -var fav_png = path+'favicon.png';
--var libsScripts = path+'js/libs.min.js';
+-var libsScripts = path+'js/lib.min.js';
 -var scripts = path+'js/scripts.min.js';
 -var noref = true;
 -var action = 'https://shop.iomp.ru/?r=personal/newsletter/sub/add&id=33401&lg=ru&Contact[id_newsletter]=';
@@ -24,8 +24,10 @@ mixin b(cl, clb, href, p, target, id)
 		a.button(class=clb href!=href target=target id=id)=p
 mixin gt(cl, h3)
 	h3.general-title(class=cl)!=h3
-mixin imgs(cl, src, alt)
+mixin img(cl, src, alt)
 	img(class=cl src=path+src alt=alt)
+mixin imgs(cl, src, srcset, alt)
+	img(class=cl src=path+src srcset=path+srcset alt=alt)
 
 doctype html
 html(lang="ru")

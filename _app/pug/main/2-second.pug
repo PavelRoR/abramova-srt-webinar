@@ -1,2 +1,13 @@
 section#second
 	.container
+		.row
+			.col-md-6.col-md-push-6
+				h3.general-title Системно-родовая терапия
+					span работает там где классическая психология бессильна.
+				p.general-text Научим быстро находить отправную точку любой проблемы и  управлять бессознательными процессами.
+				+b('mob-none', 'button-up', href, 'Записаться на мастер-клас')
+			.col-md-6.col-md-pull-6
+				.general-img
+					+imgs('mob-none', 'img/images/second.png', 'img/images/second-mob.png 560w, img/images/second.png 596w','Картинка блока')
+					//- +imgs('d-none', 'img/images/second-mob.png', 'Картинка блока')
+				+b('d-none', 'button-up', href, 'Записаться на мастер-клас')
