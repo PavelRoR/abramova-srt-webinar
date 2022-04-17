@@ -99,6 +99,8 @@ footer
 		color #fff
 		background-color: #000
 		font-weight: bold
+	@media screen and (max-width 560px)
+		padding 20px 30px
 .general-title
 	font-family: F
 	// font-size: 48px;
@@ -137,8 +139,11 @@ footer
 	height: 16px
 	transform: rotate(45deg)
 	background-color: #CFEAE5
-	&&-white
+	&-white
 		background-color #fff
+	&-big
+		width 131px
+		height: 131px
 .general-list
 	li
 		list-style none

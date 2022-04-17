@@ -888,6 +888,11 @@ footer {
   background-color: #000;
   font-weight: bold;
 }
+@media screen and (max-width: 560px) {
+  .button {
+    padding: 20px 30px;
+  }
+}
 .general-title {
   font-family: 'FreeSetExtraCTT', sans-serif;
   font-size: 36px;
@@ -940,8 +945,12 @@ footer {
           transform: rotate(45deg);
   background-color: #cfeae5;
 }
-.rhomb.rhomb-white {
+.rhomb-white {
   background-color: #fff;
+}
+.rhomb-big {
+  width: 131px;
+  height: 131px;
 }
 .general-list li {
   list-style: none;
@@ -1595,7 +1604,7 @@ footer {
 @media screen and (max-width: 767px) {
   .footer-logo {
     margin-bottom: 30px;
-    width: 200px;
+    width: 100px;
   }
 }
 @media screen and (max-width: 560px) {
