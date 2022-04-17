@@ -1,6 +1,8 @@
 section#revs
 	.container
-		h3.general-title Что говорят про “Системно-родовую терапию” наши студенты
+		.row
+			.col-md-10
+				h3.general-title Что говорят про “Системно-родовую терапию” наши студенты
 		.revs-slider-text
 			each n in [1,2,3,4,5,6,7,8]
-				a.text-rev-link(href=path+"img/revs/text-"+n+".jpg" data-fancybox="text-revs"): img(src=path+"img/revs/text-"+n+".min.jpg", alt="Отзыв "+n).text-rev-img
+				a.text-rev-link(href=path+"img/revs/text-"+n+".jpg"): img(src=path+"img/revs/text-"+n+".min.jpg", alt="Отзыв "+n).text-rev-img

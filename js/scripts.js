@@ -1,3 +1,14 @@
+window.addEventListener("DOMContentLoaded", (function () {
+    var e = document.querySelector(".mobile-menu"),
+        t = document.querySelector(".header-nav"),
+        s = document.querySelector(".mobile-menu-line-1"),
+        i = document.querySelector(".mobile-menu-line-2"),
+        c = document.querySelector(".mobile-menu-line-3");
+    e.addEventListener("click", (function () {
+        t.classList.contains("nav-active") ? (this.style.position = "absolute", t.classList.remove("nav-active"), s.classList.remove("switched"), i.classList.remove("switched"), c.classList.remove("switched")) : (this.style.position = "fixed", t.classList.add("nav-active"), s.classList.add("switched"), i.classList.add("switched"), c.classList.add("switched"))
+    }))
+}));
+
 $(document).ready(function() {
         /* Якорь */
         $(".header-menu li a").click(function (h) {
@@ -66,16 +77,24 @@ $(document).ready(function() {
             midClick: true,
             mainClass: 'mfp-fade'
         });
+        $('.text-rev-link').magnificPopup({
+            type: 'image',
+            mainClass: 'mfp-fade',
+            gallery: {
+                enabled: true
+            }
+        });
+        // Отзывы
     $('.revs-slider-text').slick({
         autoplay: false,
         autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+        dots: false,
         speed: 300,
         arrows: true,
-        centerPadding: '40px',
+        centerPadding: '20px',
         // adaptiveHeight: true,
         centerMode: true,
         // appendArrows: '.video-revs-arrows-2',

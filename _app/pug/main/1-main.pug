@@ -1,14 +1,14 @@
 section#main
 	.container
 		.row
-			.col-md-6
+			.col-md-7
 				p.main-pre Открытый онлайн мастер-класс
 				h1.main-title Системно-родовая терапия
 				p.main-text Освой самый эффективный инструмент современной психологии.
 				p.main-author Автор: Жанна Абрамова
 				p.main-text Идейный наследник теорий Берта Хеллингера. Последовательно развивала через практический опыт направление системных расстановок.
 				p.main-date Даты проведения 11.11.11
-				form(action!=action+group method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" target=form_target).form.form-maan
+				form(action!=action+group method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" target=form_target).form.form-main
 					.email-block.email-block-form
 						input( type="hidden" value="1" name="required_fields[email]")
 						input(class="input input-mail input-mail-main" name="Contact[email]" type="text" placeholder="E-mail")
@@ -30,8 +30,9 @@ section#main
 						input(type="hidden" name="formVc" value=formVc)
 						input(type="hidden" name="_aid" value="")
 						input(type="hidden" name="_vcaid" value="")
-			.col-md-6
+			.col-md-5
 				.general-img
 					.rhomb.rhomb-main-1
 					.rhomb.rhomb-main-2
-					+imgs('', 'img/images/main.png', 'img/images/main-mob.png 560w, img/images/main.png 734w','Изображение блока')
+					+imgs('mob-none', 'img/images/main.png', 'Изображение блока')
+					+imgs('d-none', 'img/images/main-mob.png', 'Изображение блока')
