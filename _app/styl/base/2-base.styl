@@ -8,21 +8,28 @@ body
 	color #000
 	background-color #fff
 	line-height: 1.56
+	@media screen and (max-width 560px)
+		font-size: 16px
+p
+	line-height: 1.3
 .wrapper
 	overflow hidden
 .content
 	position relative
 	z-index 30
 .container
-	width 1600px
-	@media screen and (max-width 1600px)
-			width 1280px
-	@media screen and (max-width 1300px)
-			width 1170px
-	@media screen and (max-width 1199px)
-			width 970px
-	@media screen and (max-width 991px)
-			width 750px
+	width 90%
+	max-width 1280px
+	margin 0 auto
+	// width 1600px
+	// @media screen and (max-width 1600px)
+	// 		width 1280px
+	// @media screen and (max-width 1300px)
+	// 		width 1170px
+	// @media screen and (max-width 1199px)
+	// 		width 970px
+	// @media screen and (max-width 991px)
+	// 		width 750px
 	@media screen and (max-width 767px)
 			width 100%
 a
@@ -84,11 +91,12 @@ footer
 	text-decoration none
 	color: #000
 	width: auto
-	padding: 20px 123px;
+	padding: 13px 80px; 14px
 	background: #FFFFFF;
 	border: 3px solid #000000;
 	border-radius: 45px;
-	font-size: 20px
+	font-size: 16px
+	line-height: 16px
 	transition: all .3s ease
 	background-color transparent
 	&:focus
@@ -99,44 +107,77 @@ footer
 		color #fff
 		background-color: #000
 		font-weight: bold
+	&-wrapper
+		position relative
 	@media screen and (max-width 560px)
-		padding 20px 30px
+		background-color: #000
+		color #fff
+		font-size: 16px
+		padding 10px 30px
+		&:focus
+			text-decoration none
+			color #fff
+		&:hover
+			text-decoration none
+			color #000
+			background-color #fff
 .general-title
 	font-family: F
-	// font-size: 48px;
 	font-size: 36px;
 	font-weight: 900;
 	line-height: 36px
-	margin-bottom: 36px
+	margin-bottom: 16px
 	span
 		color #68A599
+	@media screen and (max-width 560px)
+		font-size: 24px
+		line-height: 26px
+		margin-bottom: 25px
 .general-text
-	// font-size: 26px;
 	font-size: 20px;
-	margin-bottom: 80px
+	margin-bottom: 60px
+	@media screen and (max-width 560px)
+		font-size: 14px
+		line-height: 1.5
+		margin-bottom: 20px
 .d-none
 	display none
 	@media screen and (max-width 991px)
-		display inline-block
+		display block
 @media screen and (max-width 991px)
 	.mob-none
+		display none
+.d-none-560
+	display none
+	@media screen and (max-width 560px)
+		display block
+@media screen and (max-width 560px)
+	.mob-none-560
 		display none
 .general-img
 	position relative
 	padding-top: 100%
+	@media screen and (max-width 991px)
+		padding-top: 0
 	img
 		width auto
 		position absolute
 		top 0
 		left 0
+		@media screen and (max-width 991px)
+			position: static
+			width auto
+			max-width: 100%;
+		@media screen and (max-width 386px)
+			margin 0 auto
 	&-right
 		img
 			left  auto
 			right 0
 .rhomb
 	position absolute
-	width 16px
-	height: 16px
+	width 14px
+	height: 14px
 	transform: rotate(45deg)
 	background-color: #CFEAE5
 	&-white
@@ -144,20 +185,33 @@ footer
 	&-big
 		width 131px
 		height: 131px
+	@media screen and (max-width 560px)
+		width 8px
+		height: 8px
 .general-list
 	li
 		list-style none
-		margin-bottom: 20px
-		font-size: 20px
+		margin-bottom: 30px
+		font-size: 19px
 		position relative
 		padding-left: 26px
+		line-height: 1.3
 		&:before
 			content: ''
 			display block
 			position absolute
-			top 9px
+			top 7px
 			left 0
 			transform: rotate(45deg)
-			width 12px
-			height: 12px
+			width 10px
+			height: 10px
 			background-color: #68A599
+		@media screen and (max-width 560px)
+			font-size: 16px
+			margin-bottom: 10px
+			line-height: 18px
+			padding-left: 15px
+			&:before
+				width 5px
+				height: 5px
+				top 5px

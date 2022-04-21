@@ -1,3 +1,4 @@
+<?php require_once('date/date.php');?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -32,7 +33,7 @@
     </noscript><!-- /Yandex.Metrika counter -->
     <div class="wrapper">
       <header>
-        <div class="container"><a href="https://iomp.ru" target="_blank"><img class="header-logo" src="img/images/header-logo.png" alt="Логотип"></a>
+        <div class="container"><a href="https://iomp.ru" target="_blank"><img class="header-logo" src="img/images/logo.png" alt="Логотип"></a>
           <div class="header-nav">
             <ul class="header-menu">
               <li><a href="#second">Психологам</a></li>
@@ -54,17 +55,20 @@
             <div class="col-md-7">
               <p class="main-pre">Открытый онлайн мастер-класс</p>
               <h1 class="main-title">Системно-родовая терапия</h1>
-              <p class="main-text">Освой самый эффективный инструмент современной психологии.</p>
+              <p class="main-text main-text-1">Освой самый эффективный инструмент современной психологии.</p>
+              <div class="general-img d-none">
+                <div class="rhomb rhomb-main-3"></div><img class="main-mob-img mob-none-560" src="img/images/main.png" alt="Изображение блока"/><img class="main-mob-img d-none-560" src="img/images/main-mob.png" alt="Изображение блока"/>
+              </div>
               <p class="main-author">Автор: Жанна Абрамова</p>
               <p class="main-text">Идейный наследник теорий Берта Хеллингера. Последовательно развивала через практический опыт направление системных расстановок.</p>
-              <p class="main-date">Даты проведения 11.11.11</p>
+              <p class="main-date">Дата проведения: <?= $dateDayText;?>.<?= $dateMonthText;?>.<?= $dateYearText;?> <span>в 19:00 (мск)</span></p>
               <form class="form form-main" action="https://shop.iomp.ru/?r=personal/newsletter/sub/add&id=33401&lg=ru&Contact[id_newsletter]=423" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
                 <div class="email-block email-block-form">
                   <input type="hidden" value="1" name="required_fields[email]">
                   <input class="input input-mail input-mail-main" name="Contact[email]" type="text" placeholder="E-mail">
                 </div>
                 <div class="button-wrapper">
-                  <button class="button button-main" type="submit">Зарегистрироваться</button>
+                  <button class="button button-form button-main" type="submit">Зарегистрироваться</button>
                 </div>
                 <div class="clearfix"></div>
                 <p class="alert-message"></p>
@@ -85,9 +89,9 @@
               </form>
             </div>
             <div class="col-md-5">
-              <div class="general-img">
-                <div class="rhomb rhomb-main-1"></div>
-                <div class="rhomb rhomb-main-2"></div><img class="mob-none" src="img/images/main.png" alt="Изображение блока"/><img class="d-none" src="img/images/main-mob.png" alt="Изображение блока"/>
+              <div class="general-img general-img-right general-img-main">
+                <div class="rhomb rhomb-main-1 mob-none"></div>
+                <div class="rhomb rhomb-main-2 mob-none"></div><img class="mob-none" src="img/images/main.png" alt="Изображение блока"/>
               </div>
             </div>
           </div>
@@ -102,12 +106,12 @@
               <div class="button-wrapper mob-none"><a class="button button-up" href="#Modal">Записаться на мастер-клас</a></div>
             </div>
             <div class="col-md-5 col-md-pull-6">
-              <div class="general-img general-img-right">
-                <div class="rhomb rhomb-second-1"></div>
+              <div class="general-img general-img-second">
+                <div class="rhomb rhomb-second-1 mob-none-560"></div>
                 <div class="rhomb rhomb-second-2"></div>
-                <div class="rhomb rhomb-second-3"></div><img class="mob-none" src="img/images/second.png" alt="Картинка блока"/><img class="d-none" src="img/images/second-mob.png" alt="Картинка блока"/>
+                <div class="rhomb rhomb-second-3"></div><img class="mob-none-560" src="img/images/second.png" alt="Картинка блока"/><img class="d-none-560" src="img/images/second-mob.png" alt="Картинка блока"/>
               </div>
-              <div class="button-wrapper d-none"><a class="button button-up" href="#Modal">Записаться на мастер-класс</a></div>
+              <div class="button-wrapper second-button-wrapper d-none"><a class="button button-up" href="#Modal">Зарегистрироваться</a></div>
             </div>
           </div>
         </div>
@@ -115,20 +119,23 @@
       <section id="third">
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-7 col-xs-8">
               <h3 class="general-title">Профессия психотерапевта</h3>
               <p class="general-text">Обучаясь в “Институте Современной Психологии” по направлению “Системно-родовая терапия”, с выдачей диплома дающим право заниматься профессиональной деятельностью в сфере психотерапии, вы получите самые передовые знания.</p>
-              <div class="button-wrapper"><a class="button button-up" href="#Modal">Записаться на мастер-класс</a></div>
+              <div class="button-wrapper mob-none"><a class="button button-up" href="#Modal">Записаться на мастер-класс</a></div>
             </div>
             <div class="col-md-6">
               <div class="general-img">
-                <div class="rhomb rhomb-white rhomb-third-1"></div>
-                <div class="rhomb rhomb-white rhomb-third-2"></div>
+                <div class="rhomb rhomb-white rhomb-third-1 mob-none"></div>
+                <div class="rhomb rhomb-white rhomb-third-2 mob-none"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div class="container">
+        <div class="button-wrapper d-none"><a class="button button-up" href="#Modal">Зарегистрироваться</a></div>
+      </div>
       <section id="fourth">
         <div class="container">
           <div class="row">
@@ -138,9 +145,10 @@
               <div class="button-wrapper mob-none"><a class="button button-up" href="#Modal">Записаться на мастер-класс</a></div>
             </div>
             <div class="col-md-5 col-md-pull-6">
-              <div class="general-img general-img-right general-img-fourth">
-                <div class="rhomb rhomb-fourth"></div><img class="mob-none" src="img/images/fourth.png" alt="Картинка блока"/><img class="d-none" src="img/images/fourth-mob.png" alt="Картинка блока"/>
+              <div class="general-img general-img-fourth">
+                <div class="rhomb rhomb-fourth"></div><img class="mob-none-560" src="img/images/fourth.png" alt="Картинка блока"/><img class="d-none-560" src="img/images/fourth.png" alt="Картинка блока"/>
               </div>
+              <div class="button-wrapper d-none"><a class="button button-up" href="#Modal">Зарегистрироваться</a></div>
             </div>
           </div>
         </div>
@@ -151,10 +159,11 @@
             <div class="col-md-6">
               <h3 class="general-title"><span>Основа</span> системно-родовой терапии - <span>идеи Берта Хеллингера</span></h3>
               <p class="general-text">Идеи Берта Хеллингера оказали огромное влияние на современную психотерапию и получили признание в профессиональных кругах.</p>
-              <div class="button-wrapper"><a class="button button-up" href="#Modal">Записаться на мастер-клас</a></div>
+              <div class="button-wrapper mob-none"><a class="button button-up" href="#Modal">Записаться на мастер-класс</a></div>
+              <div class="button-wrapper d-none"><a class="button button-up" href="#Modal">Зарегистрироваться</a></div>
             </div>
             <div class="col-md-6">
-              <div class="general-img general-img-fifth"><img class="mob-none" src="img/images/fifth.png" alt="Картинка блока"/><img class="d-none" src="img/images/fifth-mob.png" alt="Картинка блока"/>
+              <div class="general-img general-img-right general-img-fifth"><img class="mob-none-560" src="img/images/fifth.png" alt="Картинка блока"/><img class="d-none-560" src="img/images/fifth.png" alt="Картинка блока"/>
               </div>
             </div>
           </div>
@@ -162,9 +171,11 @@
       </section>
       <section id="author">
         <div class="container">
+          <div class="col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6">
+            <h3 class="author-title"><small>Автор курса</small>Жанна Абрамова</h3>
+          </div>
           <div class="row">
-            <div class="col-md-6 col-md-offset-6">
-              <h3 class="author-title"><small>Автор курса</small>Жанна Абрамова</h3>
+            <div class="col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-4">
               <ul class="general-list">
                 <li>Клинический психолог, гештальт-терапевт, гипнотерапевт;</li>
                 <li>Мастер практической психологии и технологий осознанности;</li>
@@ -185,13 +196,23 @@
               <h3 class="general-title">Что говорят про “Системно-родовую терапию” наши студенты</h3>
             </div>
           </div>
-          <div class="revs-slider-text"><a class="text-rev-link" href="img/revs/text-1.jpg"><img class="text-rev-img" src="img/revs/text-1.min.jpg" alt="Отзыв 1"></a><a class="text-rev-link" href="img/revs/text-2.jpg"><img class="text-rev-img" src="img/revs/text-2.min.jpg" alt="Отзыв 2"></a><a class="text-rev-link" href="img/revs/text-3.jpg"><img class="text-rev-img" src="img/revs/text-3.min.jpg" alt="Отзыв 3"></a><a class="text-rev-link" href="img/revs/text-4.jpg"><img class="text-rev-img" src="img/revs/text-4.min.jpg" alt="Отзыв 4"></a><a class="text-rev-link" href="img/revs/text-5.jpg"><img class="text-rev-img" src="img/revs/text-5.min.jpg" alt="Отзыв 5"></a><a class="text-rev-link" href="img/revs/text-6.jpg"><img class="text-rev-img" src="img/revs/text-6.min.jpg" alt="Отзыв 6"></a><a class="text-rev-link" href="img/revs/text-7.jpg"><img class="text-rev-img" src="img/revs/text-7.min.jpg" alt="Отзыв 7"></a><a class="text-rev-link" href="img/revs/text-8.jpg"><img class="text-rev-img" src="img/revs/text-8.min.jpg" alt="Отзыв 8"></a>
+          <div class="revs-slider-text mob-none-560"><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-6.jpg"><img class="text-rev-img" src="img/revs/rev-6.jpg" alt="Отзыв 6"></a><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-7.jpg"><img class="text-rev-img" src="img/revs/rev-7.jpg" alt="Отзыв 7"></a><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-8.jpg"><img class="text-rev-img" src="img/revs/rev-8.jpg" alt="Отзыв 8"></a><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-1.jpg"><img class="text-rev-img" src="img/revs/rev-1.jpg" alt="Отзыв 1"></a><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-2.jpg"><img class="text-rev-img" src="img/revs/rev-2.jpg" alt="Отзыв 2"></a><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-3.jpg"><img class="text-rev-img" src="img/revs/rev-3.jpg" alt="Отзыв 3"></a><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-4.jpg"><img class="text-rev-img" src="img/revs/rev-4.jpg" alt="Отзыв 4"></a><a class="text-rev-link text-rev-link-modal" href="img/revs/rev-5.jpg"><img class="text-rev-img" src="img/revs/rev-5.jpg" alt="Отзыв 5"></a>
+          </div>
+          <div class="revs-slider-text d-none-560">
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-6.min.jpg" alt="Отзыв 6"></div>
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-7.min.jpg" alt="Отзыв 7"></div>
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-8.min.jpg" alt="Отзыв 8"></div>
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-1.min.jpg" alt="Отзыв 1"></div>
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-2.min.jpg" alt="Отзыв 2"></div>
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-3.min.jpg" alt="Отзыв 3"></div>
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-4.min.jpg" alt="Отзыв 4"></div>
+            <div class="text-rev-link"><img class="text-rev-img" src="img/revs/rev-5.min.jpg" alt="Отзыв 5"></div>
           </div>
         </div>
       </section>
       <footer>
         <div class="container">
-          <hr class="footer-hr"><a href="https:/iomp.ru/" target="_blank"><img class="footer-logo" src="img/images/footer-logo.png" alt="Логотип"/></a>
+          <hr class="footer-hr"><a href="https:/iomp.ru/" target="_blank"><img class="footer-logo" src="img/images/logo.png" alt="Логотип"></a>
           <div class="row">
             <div class="col-md-6">
               <p class="footer-text">125315, г. Москва, пр-кт Ленинградский, д. 68, стр. 24, эт/пом/ком 2/IV/20</p>

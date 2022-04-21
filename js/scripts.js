@@ -1,17 +1,29 @@
-window.addEventListener("DOMContentLoaded", (function () {
-    var e = document.querySelector(".mobile-menu"),
-        t = document.querySelector(".header-nav"),
-        s = document.querySelector(".mobile-menu-line-1"),
-        i = document.querySelector(".mobile-menu-line-2"),
-        c = document.querySelector(".mobile-menu-line-3");
-    e.addEventListener("click", (function () {
-        t.classList.contains("nav-active") ? (this.style.position = "absolute", t.classList.remove("nav-active"), s.classList.remove("switched"), i.classList.remove("switched"), c.classList.remove("switched")) : (this.style.position = "fixed", t.classList.add("nav-active"), s.classList.add("switched"), i.classList.add("switched"), c.classList.add("switched"))
-    }))
-}));
+// window.addEventListener("DOMContentLoaded", (function () {
+//     var e = document.querySelector(".mobile-menu"),
+//         t = document.querySelector(".header-nav"),
+//         s = document.querySelector(".mobile-menu-line-1"),
+//         i = document.querySelector(".mobile-menu-line-2"),
+//         c = document.querySelector(".mobile-menu-line-3");
+//     e.addEventListener("click", (function () {
+//         t.classList.contains("nav-active") ? (this.style.position = "absolute", t.classList.remove("nav-active"), s.classList.remove("switched"), i.classList.remove("switched"), c.classList.remove("switched")) : (this.style.position = "fixed", t.classList.add("nav-active"), s.classList.add("switched"), i.classList.add("switched"), c.classList.add("switched"))
+//     }))
+// }));
 
 $(document).ready(function() {
+    // Меню
+    $('.mobile-menu, .header-menu li a').on('click', function () {
+        if (!$('.header-nav').hasClass('nav-active')) {
+            $('.mobile-menu').css('position', 'fixed');
+            $('.header-nav').addClass('nav-active');
+            $('.mobile-menu-line-1,.mobile-menu-line-2,.mobile-menu-line-3').addClass('switched')
+        } else {
+            $('.mobile-menu').css('position', 'absolute');
+            $('.header-nav').removeClass('nav-active')
+            $('.mobile-menu-line-1,.mobile-menu-line-2,.mobile-menu-line-3').removeClass('switched')
+        }
+    })
         /* Якорь */
-        $(".header-menu li a").click(function (h) {
+        $(".header-menu li a, .footer-menu li a").click(function (h) {
             h.preventDefault();
             var f = $(this).attr("href"),
                 g = $(f).offset().top;
@@ -19,6 +31,10 @@ $(document).ready(function() {
                 scrollTop: g
             }, 1500)
         });
+        // $('.header-menu li a').on('click', function(){
+
+        // })
+        // Проверка форм
     $(function () {
         var check = $('.check', this),
             email = $('.input-mail', this),
@@ -77,7 +93,7 @@ $(document).ready(function() {
             midClick: true,
             mainClass: 'mfp-fade'
         });
-        $('.text-rev-link').magnificPopup({
+        $('.text-rev-link-modal').magnificPopup({
             type: 'image',
             mainClass: 'mfp-fade',
             gallery: {
@@ -100,15 +116,16 @@ $(document).ready(function() {
         // appendArrows: '.video-revs-arrows-2',
         responsive: [
         {
-            breakpoint: 481,
-            settings: {
-                slidesToShow: 1
-            }},{
             breakpoint: 992,
             settings: {
-                slidesToShow: 3
-            }
-        }
+                slidesToShow: 1
+            }}
+            // {
+            // breakpoint: 992,
+            // settings: {
+            //     slidesToShow: 3
+            // }
+        // }
         ]
     });
 

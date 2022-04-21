@@ -3,6 +3,20 @@ section#revs
 		.row
 			.col-md-10
 				h3.general-title Что говорят про “Системно-родовую терапию” наши студенты
-		.revs-slider-text
-			each n in [1,2,3,4,5,6,7,8]
-				a.text-rev-link(href=path+"img/revs/text-"+n+".jpg"): img(src=path+"img/revs/text-"+n+".min.jpg", alt="Отзыв "+n).text-rev-img
+		.revs-slider-text.mob-none-560
+			each n in [6,7,8,1,2,3,4,5]
+				a.text-rev-link.text-rev-link-modal(href=path+"img/revs/rev-"+n+".jpg"): img(src=path+"img/revs/rev-"+n+".jpg", alt="Отзыв "+n).text-rev-img
+		.revs-slider-text.d-none-560
+			each n in [6,7,8,1,2,3,4,5]
+				//- a.text-rev-link(href=path+"img/revs/rev-"+n+".jpg")
+				.text-rev-link
+					img(src=path+"img/revs/rev-"+n+".min.jpg", alt="Отзыв "+n).text-rev-img
+		//- ul.footer-menu.d-none
+		//- 	li
+		//- 		a(href="#second") Психологам
+		//- 	li
+		//- 		a(href="#third") Новая профессия
+		//- 	li
+		//- 		a(href="#fourth") Личная трансформация
+		//- 	li
+		//- 		a(href="#revs") Отзывы

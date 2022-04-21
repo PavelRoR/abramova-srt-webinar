@@ -1,20 +1,52 @@
 #author
-	padding 140px 0 90px
+	padding 100px 0 60px
 	background-color: #E1E3E2
 	background-image: url(../img/backs/author.png)
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
-	min-height 1178px
+	// min-height 1178px
+	@media screen and (max-width 991px)
+		padding 50px 0 100px
+		// min-height 1px
+		background-position: center left 35%
+	@media screen and (max-width 767px)
+		padding 20px 0 100px
+	@media screen and (max-width 620px)
+		background-position: center left 40%
+	@media screen and (max-width 560px)
+		padding 20px 0 65px
+		background-image: url(../img/backs/author-mob.png)
+		background-position: top left 40%
+	@media screen and (max-width 420px)
+		background-position: top left 30%
+	@media screen and (max-width 386px)
+		background-position: center left 25%
 .author-title
 	font-family: F
 	font-size: 36px
-	font-weight: 900
 	margin-bottom: 44px
+	@media screen and (max-width 991px)
+		margin-bottom: 45px
+	@media screen and (max-width 767px)
+		margin-bottom: 85px
+	@media screen and (max-width 560px)
+		font-size: 24px
+		line-height: 26px
+	@media screen and (max-width 386px)
+		margin-bottom: 30px
 	small
 		display block
 		color #68A599
 		font-family: G
+		font-size: 19px
 		font-weight: bold
 		position relative
-		left -50px
+		left -35px
+		margin-bottom: 10px
+		@media screen and (max-width 991px)
+			left 0
+		@media screen and (max-width 560px)
+			font-size: 16px
+			line-height: 16px
+			left 0

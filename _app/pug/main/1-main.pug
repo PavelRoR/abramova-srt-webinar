@@ -4,16 +4,22 @@ section#main
 			.col-md-7
 				p.main-pre Открытый онлайн мастер-класс
 				h1.main-title Системно-родовая терапия
-				p.main-text Освой самый эффективный инструмент современной психологии.
+				p.main-text.main-text-1 Освой самый эффективный инструмент современной психологии.
+				.general-img.d-none
+					.rhomb.rhomb-main-3
+					+imgs('main-mob-img mob-none-560', 'img/images/main.png', 'Изображение блока')
+					+imgs('main-mob-img d-none-560', 'img/images/main-mob.png', 'Изображение блока')
+					//- +imgs('main-mob-img d-none-560', 'img/images/main-mob.png', 'Изображение блока')
 				p.main-author Автор: Жанна Абрамова
 				p.main-text Идейный наследник теорий Берта Хеллингера. Последовательно развивала через практический опыт направление системных расстановок.
-				p.main-date Даты проведения 11.11.11
+				p.main-date Дата проведения: <?= $dateDayText;?>.<?= $dateMonthText;?>.<?= $dateYearText;?> 
+					span в 19:00 (мск)
 				form(action!=action+group method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" target=form_target).form.form-main
 					.email-block.email-block-form
 						input( type="hidden" value="1" name="required_fields[email]")
 						input(class="input input-mail input-mail-main" name="Contact[email]" type="text" placeholder="E-mail")
 					.button-wrapper
-						button(type="submit").button.button-main Зарегистрироваться
+						button(type="submit").button.button-form.button-main Зарегистрироваться
 					.clearfix
 					p.alert-message
 					.checking.checking-main
@@ -31,8 +37,7 @@ section#main
 						input(type="hidden" name="_aid" value="")
 						input(type="hidden" name="_vcaid" value="")
 			.col-md-5
-				.general-img
-					.rhomb.rhomb-main-1
-					.rhomb.rhomb-main-2
+				.general-img.general-img-right.general-img-main
+					.rhomb.rhomb-main-1.mob-none
+					.rhomb.rhomb-main-2.mob-none
 					+imgs('mob-none', 'img/images/main.png', 'Изображение блока')
-					+imgs('d-none', 'img/images/main-mob.png', 'Изображение блока')

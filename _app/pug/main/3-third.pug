@@ -1,11 +1,13 @@
 section#third
 	.container
 		.row
-			.col-md-6
+			.col-md-6.col-sm-7.col-xs-8
 				h3.general-title Профессия психотерапевта
 				p.general-text Обучаясь в “Институте Современной Психологии” по направлению “Системно-родовая терапия”, с выдачей диплома дающим право заниматься профессиональной деятельностью в сфере психотерапии, вы получите самые передовые знания.
-				+b('', 'button-up', href, 'Записаться на мастер-класс')
+				+b('mob-none', 'button-up', href, 'Записаться на мастер-класс')
 			.col-md-6
 				.general-img
-					.rhomb.rhomb-white.rhomb-third-1
-					.rhomb.rhomb-white.rhomb-third-2
+					.rhomb.rhomb-white.rhomb-third-1.mob-none
+					.rhomb.rhomb-white.rhomb-third-2.mob-none
+.container
+	+b('d-none', 'button-up', href, 'Зарегистрироваться')

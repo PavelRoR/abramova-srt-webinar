@@ -1,13 +1,14 @@
 header
 	overflow hidden
 	padding 20px 0
-	margin-bottom: 60px
+	margin-bottom: 40px
 	.container
 		z-index auto
 .header-logo
 	float left
-	width auto
+	width 100px
 .header-menu
+// .footer-menu
 	float: right
 	line-height: 2.1
 	li
@@ -15,7 +16,7 @@ header
 		display inline-block
 		margin-left: 20px
 		a
-			font-size: 16px
+			font-size: 15px
 			color: #000
 			transition: all .3s ease
 			&:focus
@@ -82,7 +83,16 @@ header
 		margin-bottom: 30px
 	.mobile-menu
 		display: block;
+	.header-menu
+	// .footer-menu
+		float: none
+	// .footer-menu
+	// 	li
+	// 		margin-left: 0
+	// 		display block
+	// 		margin-bottom: 15px
 	.header-menu li
+		display block
 		margin-bottom: 20px;
 @media screen and (max-width 767px)
 	header
@@ -90,11 +100,10 @@ header
 	.header-logo
 		float: none
 		display: inline-block;
+		width 70px
 @media screen and (max-width 560px)
 	header
 		margin-bottom: 10px
-	.header-logo
-		height: 40px
 	.mobile-menu
 		top 20px
 @media screen and (max-width 385px)
